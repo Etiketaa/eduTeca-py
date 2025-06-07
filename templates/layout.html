@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>EduTeca</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+  </head>
+  <body>
+    <!-- inicio del navegador-->
+    <header>
+      <div class="logo">
+        <a href="{{ url_for('home') }}">
+          <svg
+            width="89px"
+            height="89px"
+            viewBox="-4.8 -4.8 33.60 33.60"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            transform="rotate(90)matrix(1, 0, 0, 1, 0, 0)"
+            stroke="#000000"
+            stroke-width="0.6"
+          >
+            <g
+              id="SVGRepo_bgCarrier"
+              stroke-width="0"
+              transform="translate(0,0), scale(1)"
+            ></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke="#ffffff"
+              stroke-width="2.928"
+            >
+              <path
+                d="M11.2497 3.89863V12.9186C11.2497 13.2486 11.0897 13.5486 10.8197 13.7386L3.60969 18.7886C3.01969 19.1986 2.17969 18.8786 2.04969 18.1686C1.89969 17.3086 2.09969 16.2986 2.69969 15.2086L5.81969 9.59864L8.75969 4.30863C8.98969 3.89863 9.23969 3.53863 9.49969 3.22863C10.0997 2.52863 11.2497 2.97863 11.2497 3.89863Z"
+                fill="#292D32"
+              ></path>
+              <path
+                d="M20.39 18.7886L13.18 13.7386C12.91 13.5486 12.75 13.2486 12.75 12.9186V3.89863C12.75 2.97863 13.9 2.52863 14.5 3.22863C14.76 3.53863 15.01 3.89863 15.24 4.30863L18.18 9.59864L21.3 15.2086C21.9 16.2986 22.1 17.3086 21.95 18.1686C21.82 18.8786 20.98 19.1986 20.39 18.7886Z"
+                fill="#292D32"
+              ></path>
+              <path
+                d="M5.26018 19.14L11.4102 15.04C11.7402 14.82 12.2802 14.82 12.6102 15.04L18.7602 19.14C20.3902 20.23 20.1202 21.12 18.1602 21.12H5.85018C3.90018 21.11 3.63018 20.22 5.26018 19.14Z"
+                fill="#292D32"
+              ></path>
+            </g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M11.2497 3.89863V12.9186C11.2497 13.2486 11.0897 13.5486 10.8197 13.7386L3.60969 18.7886C3.01969 19.1986 2.17969 18.8786 2.04969 18.1686C1.89969 17.3086 2.09969 16.2986 2.69969 15.2086L5.81969 9.59864L8.75969 4.30863C8.98969 3.89863 9.23969 3.53863 9.49969 3.22863C10.0997 2.52863 11.2497 2.97863 11.2497 3.89863Z"
+                fill="#292D32"
+              ></path>
+              <path
+                d="M20.39 18.7886L13.18 13.7386C12.91 13.5486 12.75 13.2486 12.75 12.9186V3.89863C12.75 2.97863 13.9 2.52863 14.5 3.22863C14.76 3.53863 15.01 3.89863 15.24 4.30863L18.18 9.59864L21.3 15.2086C21.9 16.2986 22.1 17.3086 21.95 18.1686C21.82 18.8786 20.98 19.1986 20.39 18.7886Z"
+                fill="#292D32"
+              ></path>
+              <path
+                d="M5.26018 19.14L11.4102 15.04C11.7402 14.82 12.2802 14.82 12.6102 15.04L18.7602 19.14C20.3902 20.23 20.1202 21.12 18.1602 21.12H5.85018C3.90018 21.11 3.63018 20.22 5.26018 19.14Z"
+                fill="#292D32"
+              ></path>
+            </g></svg
+        ></a>
+        <h4 class="textHeader">EduTeca</h4>
+      </div>
+      <div class="usuario">
+        <a href="{{ url_for('login') }}"
+          ><h5 class="textHeader">Ingresar</h5></a
+        >
+        <a href="{{ url_for('login') }}"
+          ><svg
+            width="70px"
+            height="70px"
+            viewBox="-8.88 -8.88 41.76 41.76"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            stroke="#ffffff"
+          >
+            <g
+              id="SVGRepo_bgCarrier"
+              stroke-width="0"
+              transform="translate(1.8000000000000007,1.8000000000000007), scale(0.85)"
+            >
+              <path
+                transform="translate(-8.88, -8.88), scale(1.305)"
+                d="M16,26.227930114065344C17.722354394573998,25.990545652030274,19.600998753996883,28.296832216613083,21.041345237321103,27.323046792970075C22.624111975643537,26.25297428149477,21.24049795877316,23.28886139250356,22.48782224544705,21.841661388486017C23.6949292183265,20.441123264868544,26.24627935057519,21.055396811260298,27.56252344165518,19.75689160434846C28.93291978146312,18.404963952909988,29.93129418204079,16.464758649505487,29.88902411711061,14.540204741584555C29.846916695073194,12.62305595630497,28.765507774753065,10.733474937323328,27.336257367703297,9.455008757153628C25.94287740215785,8.208628729350814,23.525336928011644,8.810873264818541,22.113720139130688,7.585186133680017C20.515501899659803,6.197475570657284,20.823431186577597,3.132320978154402,18.940669606310237,2.1652372281247363C17.21307218514346,1.2778538174401506,14.996347565014199,2.19360303748454,13.242854584318797,3.028650661175705C11.588061796889468,3.816695324061172,10.94320107959998,5.974419290807582,9.288163324227328,6.76194934631115C7.159950957217742,7.774633919864616,3.1688926827321313,5.929311780108354,2.4380348595940404,8.169995775446289C1.6012640340705526,10.735390763579206,6.84019330629083,12.32427639677948,6.597279707299215,15.01173427421862C6.359722399143118,17.639933196788533,1.1864565110485272,18.14026401772331,1.2985329954045763,20.776796193311238C1.3929252292264462,22.99731696559357,5.32560163037704,22.638482770840962,6.984366238226784,24.117713101008746C8.428131726117837,25.405214467526562,8.415944421108188,28.362681564293112,10.299492876504502,28.803548629273802C12.35217043518752,29.284002385616322,13.911586494766151,26.515766878675763,16,26.227930114065344"
+                fill="#000000"
+                strokewidth="0"
+              ></path>
+            </g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke="#CCCCCC"
+              stroke-width="0.144"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <circle
+                cx="12"
+                cy="9"
+                r="3"
+                stroke="#ffffff"
+                stroke-width="1.5"
+              ></circle>
+              <circle
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="#ffffff"
+                stroke-width="1.5"
+              ></circle>
+              <path
+                d="M17.9691 20C17.81 17.1085 16.9247 15 11.9999 15C7.07521 15 6.18991 17.1085 6.03076 20"
+                stroke="#ffffff"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              ></path>
+            </g></svg
+        ></a>
+      </div>
+    </header>
+    <nav>
+      <a href="{{ url_for('about') }}"><button>Nuestro Trabajo</button></a>
+
+      <a href="{{ url_for('cursos')}}"><button>Nuestros Cursos</button></a>
+      <button id="modalContacto">Contactanos</button>
+    </nav>
+    <main>
+    <!--Ventana modal de contacto-->
+    <div id="formContacto" class="modalContainer">
+      <div class="modalContent">
+        <span class="close">X</span>
+        <h2>Formulario de contacto</h2>
+        <p>Dejanos tus datos, tu consulta y nos comunicaremos a la brevedad.</p>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1"
+            >Nombre completo</span
+          >
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Username"
+            aria-describedby="basic-addon1"
+          />
+        </div>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon2">Email</span>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Recipient's username"
+            aria-describedby="basic-addon2"
+          />
+        </div>
+        <div class="input-group">
+          <textarea
+            class="form-control"
+            aria-label="With textarea"
+            placeholder="Escribinos tu consulta.."
+          ></textarea>
+        </div>
+      </div>
+    </div>
+    <!--Fin de ventana modal de contacto-->
+    <div class="container p-4">{% block content %} {% endblock%}</div>
+</main>
+    <br />
+    <footer>
+      <a href="{{ url_for('post')}}"><button>subir cursos</button></a>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <!-- SCRIPTS -->
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+  </body>
+</html>

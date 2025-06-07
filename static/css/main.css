@@ -1,0 +1,174 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+body {
+  background-image: url(/static/img/background.png);
+  background-size: cover; /* Para que la imagen cubra toda la pantalla */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.carrusel.banners{
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+/* Estilos para el header */
+header {
+  background-color: transparent;
+  width: 100%;
+  height: 7%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.logo, .usuario {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.textHeader {
+  color: aliceblue;
+}
+
+/* Estilos Nav */
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+button {
+  appearance: none;
+  background-color: transparent;
+  border: 0.125em solid #1A1A1A;
+  border-radius: 0.9375em;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 3.75em;
+  min-width: 0;
+  outline: none;
+  padding: 1em 2.3em;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+button:disabled {
+  pointer-events: none;
+}
+
+button:hover {
+  color: #fff;
+  background-color: #000000;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+/* Modal */
+.modalContainer {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.modalContainer .modalContent {
+  background-color: #ffffff;
+  margin: auto;
+  padding: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.24);
+  width: 90%; /* Utiliza porcentaje para adaptarlo a diferentes tamaños de pantalla */
+  max-width: 600px; /* Asegura que no sea demasiado ancho en pantallas grandes */
+  border-radius: 15px; /* Esquinas redondeadas */
+  box-sizing: border-box; /* Incluye padding y border en el cálculo de width */
+}
+
+.modalContainer .close {
+  color: rgb(0, 0, 0);
+  float: right;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.modalContainer .close:hover, .close:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Login */
+.login-container {
+  margin-top: 15vh;
+  display: flex;
+  justify-content: center;
+}
+
+/* Otros estilos... */
+.container{
+  max-width: 960px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.card-deck {
+   margin-top: 20px;
+}
+.card {
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #000;
+
+  transition: all 0.3s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 20px #000;
+}
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+.card-text {
+  font-size: 18px;
+}
+
+footer{
+  background-color:  slateblue;
+  height:  10vh;
+  width: auto;
+  padding: 10px;
+}

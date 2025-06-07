@@ -1,0 +1,16 @@
+{% extends "layout.html" %}   <!-- declaro de donde traigo la plantilla -->
+
+{% block content %}
+/* From Uiverse.io by Yaya12085 */ 
+<div class="register-container">
+  <form class="form-register">
+    <span class="register-title">Register</span>
+    <label for="username" class="register-label">Username</label>
+    <input type="text" id="username" name="username" required="" class="input-register">
+    <label for="email" class="register-label">Email</label>
+    <input type="email" id="email" name="email" required="" class="input-register">
+    <label for="password" class="register-label">Password</label>
+    <input type="password" id="password" name="password" required="" class="input-register">
+    <button type="submit" class="submit-register-btn">Register</button>
+  </form>
+{% endblock%}
